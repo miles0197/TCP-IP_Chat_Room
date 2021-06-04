@@ -35,7 +35,7 @@ def receive():
 		client, address = server.accept()
 		print(f"Connected with {str(address)}")
 
-		client.send('NICK'.encode('ascii'))
+		client.send('Name'.encode('ascii'))
 		nickname = client.recv(1024).decode('ascii')
 		nicknames.append(nickname)
 		clients.append(client)
