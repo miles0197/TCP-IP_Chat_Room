@@ -10,7 +10,7 @@ def receive():
 	while True:
 		try:
 			messsage = client.recv(1024).decode('ascii')
-			if message == 'NICK':
+			if message == 'Name':
 				client.send(nickname.encode('ascii'))
 			else:
 				print(message)
